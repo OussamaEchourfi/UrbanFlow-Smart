@@ -1,0 +1,7 @@
+,MAE,RMSE,R2,Train_Time_s,Infer_Time_s,Params,FileSize_MB,Latence_ms_par_echantillon
+Random Forest,2.304,4.321,0.914,18.366,0.575,189956.0,13.062,0.305
+GCN-LSTM,2.337,4.356,0.913,282.861,1.104,12769.0,0.056,0.585
+GCN-LSTM (sans arêtes),2.356,4.434,0.909,255.495,1.023,12769.0,0.056,0.542
+LSTM par capteur,2.359,4.453,0.909,189.142,0.567,4513.0,0.02,0.301
+Baseline Persistance,2.419,4.717,0.898,0.0,0.0,0.0,,0.0
+Baseline Moyenne Horaire,3.977,7.403,0.748,0.0,0.0,0.0,,0.0

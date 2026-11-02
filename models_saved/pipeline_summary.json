@@ -1,0 +1,116 @@
+{
+    "N_SENSORS": 30,
+    "IN_LEN": 12,
+    "HORIZON": 3,
+    "mu_train": 58.602684020996094,
+    "std_train": 14.202735900878906,
+    "best_lstm_params": {
+        "hidden_dim": 32,
+        "lr": 0.005
+    },
+    "best_gcn_params": {
+        "hidden_dim": 48,
+        "gcn_dim": 16,
+        "lr": 0.003
+    },
+    "best_rf_params": {
+        "n_estimators": 60,
+        "max_depth": 16,
+        "min_samples_leaf": 4
+    },
+    "test_metrics": {
+        "Random Forest": {
+            "MAE": 2.304,
+            "RMSE": 4.3211,
+            "R2": 0.914,
+            "Train_Time_s": 18.3661,
+            "Infer_Time_s": 0.5749,
+            "Params": 189956.0,
+            "FileSize_MB": 13.0623,
+            "Latence_ms_par_echantillon": 0.3047
+        },
+        "GCN-LSTM": {
+            "MAE": 2.3369,
+            "RMSE": 4.3561,
+            "R2": 0.9126,
+            "Train_Time_s": 282.861,
+            "Infer_Time_s": 1.1041,
+            "Params": 12769.0,
+            "FileSize_MB": 0.0557,
+            "Latence_ms_par_echantillon": 0.5851
+        },
+        "GCN-LSTM (sans ar\u00eates)": {
+            "MAE": 2.3564,
+            "RMSE": 4.434,
+            "R2": 0.9095,
+            "Train_Time_s": 255.4952,
+            "Infer_Time_s": 1.0232,
+            "Params": 12769.0,
+            "FileSize_MB": 0.0559,
+            "Latence_ms_par_echantillon": 0.5422
+        },
+        "LSTM par capteur": {
+            "MAE": 2.3587,
+            "RMSE": 4.4528,
+            "R2": 0.9087,
+            "Train_Time_s": 189.1416,
+            "Infer_Time_s": 0.5671,
+            "Params": 4513.0,
+            "FileSize_MB": 0.0201,
+            "Latence_ms_par_echantillon": 0.3005
+        },
+        "Baseline Persistance": {
+            "MAE": 2.4189,
+            "RMSE": 4.7168,
+            "R2": 0.8976,
+            "Train_Time_s": 0.0,
+            "Infer_Time_s": 0.0,
+            "Params": 0.0,
+            "FileSize_MB": NaN,
+            "Latence_ms_par_echantillon": 0.0
+        },
+        "Baseline Moyenne Horaire": {
+            "MAE": 3.9775,
+            "RMSE": 7.4025,
+            "R2": 0.7477,
+            "Train_Time_s": 0.0,
+            "Infer_Time_s": 0.0001,
+            "Params": 0.0,
+            "FileSize_MB": NaN,
+            "Latence_ms_par_echantillon": 0.0
+        }
+    },
+    "multi_seed_metrics": {
+        "GCN-LSTM": {
+            "MAE_mean": 2.3812,
+            "MAE_std": 0.0175,
+            "RMSE_mean": 4.3827,
+            "RMSE_std": 0.0048,
+            "R2_mean": 0.9116,
+            "R2_std": 0.0002
+        },
+        "GCN-LSTM (sans ar\u00eates)": {
+            "MAE_mean": 2.3785,
+            "MAE_std": 0.0138,
+            "RMSE_mean": 4.4586,
+            "RMSE_std": 0.0056,
+            "R2_mean": 0.9085,
+            "R2_std": 0.0002
+        },
+        "LSTM par capteur": {
+            "MAE_mean": 2.3802,
+            "MAE_std": 0.0093,
+            "RMSE_mean": 4.4711,
+            "RMSE_std": 0.0044,
+            "R2_mean": 0.908,
+            "R2_std": 0.0002
+        }
+    },
+    "health_checks": {
+        "gcn_lstm_train_mse_final": 0.09588298891429547,
+        "gcn_lstm_val_mse_final": 0.09318573418738163,
+        "gcn_lstm_test_mae": 2.336923360824585,
+        "persistence_test_mae": 2.4189453125,
+        "n_sensors_verified": 30
+    }
+}
